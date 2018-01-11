@@ -1,0 +1,5 @@
+location ^~ /pep-push {
+    proxy_next_upstream http_500 http_502 http_503 http_504 error timeout invalid_header;
+
+    proxy_pass http://service_properpush/pep-push/;
+}

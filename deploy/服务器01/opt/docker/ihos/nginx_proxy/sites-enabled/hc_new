@@ -1,0 +1,4 @@
+location ^~ /hc_new {
+        default_type application/octet-stream;
+        root /etc/nginx;
+}

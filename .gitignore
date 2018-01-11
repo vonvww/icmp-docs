@@ -1,0 +1,25 @@
+platforms/
+plugins/
+www/
+
+# ignore node and bower root
+bower_components
+node_modules
+
+# ignore build folders
+.tmp
+dist/
+.sass-cache/
+build/
+out/
+.gradle/
+
+# ignore temp files
+.DS_Store
+
+# ignore ide related
+.idea/
+.project
+*.iml
+*.ipr
+*.iws
