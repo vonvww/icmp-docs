@@ -36,20 +36,6 @@ mysql_official:
   ports:
     - "33306:3306"
   command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
-mysql_slave_official:
-  image: mysql:5.7.14
-  restart: always
-  volumes:
-    - ./mysql_slave/data:/var/lib/mysql
-    - ./mysql_slave/conf:/etc/mysql/conf.d
-  environment:
-    - MYSQL_ROOT_PASSWORD=Proper123
-    - MYSQL_DATABASE=icmp
-    - MYSQL_USER=icmp
-    - MYSQL_PASSWORD=U0kl0tshMi
-  ports:
-    - "33307:3306"
-  command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
 nginx_proxy_official:
   image: nginx:1.13.7
   restart: always
